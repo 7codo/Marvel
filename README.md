@@ -7,7 +7,7 @@
 - Tailwind CSS
 
 **Features:**
-- [x] Responsive in all screen sizes
+- [x] Responsive with all screen sizes
 - [x] Support dark mode
 - [x] Framework Tailwind CSS
 
