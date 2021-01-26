@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+
+/*Main Buttons*/
+
+.owl-item > img {
+    @apply max-w-5xl inline-block !important
+}
+
+.owl-prev span,
+.owl-next span{
+    @apply hidden !important
+}
+
+.owl-prev::before,
+.owl-next::before {
+    padding: 0;
+    display: block;
+    top: 50%;
+    position: absolute;
+    color: #47675A;
+    width: 50px;
+    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    height: 50px;
+}
+
+.owl-prev::before {
+    content: " ";
+    background-image: url(../src/image/arrow.svg);
+    left: 75px;
+}
+
+.owl-next::before{
+    content: " ";
+    background-image: url(../src/image/right-arrow.svg);
+    right: 75px;
+}
+
+.btn {
+    @apply w-full px-7 font-semibold capitalize py-3.5 rounded-3xl 
+}
+
+
+.mapouter,
+.gmap_canvas {
+    width: 320px;
+    height: 280px;
+}
+
+@media (min-width: 375px){
+
+    .mapouter,
+    .gmap_canvas {
+        min-width: 375px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 425px){
+
+    .mapouter,
+    .gmap_canvas {
+        min-width: 425px;
+        height: 300px;
+    }
+}
+
+
+@screen md {
+    .btn {
+        @apply w-auto
+    }
+    .mapouter,
+    .gmap_canvas {
+        width: 31.25rem;
+        height: 300px;
+    }
+}
+
+.owl-theme .owl-nav {
+    @apply -mb-10
+}
+
+
+
+
+.resume {
+    @apply grid grid-cols-1 gap-2 
+}
+
+.resume div h2 {
+    @apply text-4xl text-secColor mb-9 font-black
+}
+
+.resume div .timeline_ex {
+    @apply mb-8
+}
+
+.timeyr_ex {
+    @apply w-16 h-16 relative bg-headingColor rounded-full float-left mr-4
+}
+
+.timeyr_ex > span{
+    @apply text-xl text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold
+
+}
+
+.timeyr_ex::after {
+    content: "";
+    @apply h-52 absolute left-1/2 top-full transform -translate-x-1/2 block w-1 bg-headingColor
+}
+
+.timeline_cart {
+
+}
+
+
+.timeline_cart h3{
+    @apply text-secColor
+}
+
+.timeline_cart h3 > span:first-child{
+    @apply text-xl font-bold uppercase
+}
+
+.timeline_cart h3 > span:last-child{
+    @apply text-lg ml-1 font-semibold capitalize
+}
+
+.timeline_cart p {
+    @apply py-1 flow-root tracking-wide
+}
+
+@media (min-width: 331px) and (max-width: 639px){
+    .timeline_cart p {
+        min-height: 11rem;
+    }
+
+    .resume div h2 {
+        margin-top: 2rem;
+    }
+}
+
+
+@screen sm{ /*640*/
+    .timeyr_ex::after {
+        @apply h-20;
+    }
+}
+
+@screen md { /*768*/
+    .resume {
+        @apply px-8 gap-4 grid-cols-1
+    }
+
+    .resume div .timeline_ex {
+        @apply mb-24
+    }
+
+    .exper_head2 {
+        @apply mt-24
+    }
+
+    .timeline_cart p {
+        @apply py-2 tracking-wider
+    }
+
+    .timeline_cart h3 > span:last-child{
+        @apply text-xl ml-4
+    }
+    
+    .timeline_cart h3 > span:first-child{
+        @apply text-2xl
+    }
+
+    .timeyr_ex > span{
+        @apply text-2xl
+    }
+
+    .timeyr_ex {
+        @apply w-28 h-28
+    }
+
+    .timeyr_ex::after {
+        
+        @apply h-full 
+    }
+}
+
+@screen lg { /*1024*/
+    .resume {
+        @apply px-2 gap-4 grid-cols-2
+    }
+
+    .resume div .timeline_ex {
+        @apply mb-16
+    }
+
+    .exper_head2 {
+        @apply mt-0
+    }
+}
+
+@screen 2xl { /*1536*/
+    .resume {
+        @apply px-8 gap-8
+    }
+
+    .resume div .timeline_ex {
+        @apply mb-24
+    }
+
+}
+
+
+.timeline_ex > div[class~="timeyr_fnl"]::after{
+    @apply hidden
+}
+
+.headroom--pinned {
+    display: flex;
+    position: fixed;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    z-index: 50;
+    max-width: 100%;
+    box-shadow: 0 0.05px 1.4px #000;
+    background-color: #fff;
+}
+
+nav[class~="dark-nav"]{
+    background-color: #000;
+    box-shadow: none;
+}
+
+html[class~="dark"] nav{
+    background-color: #000;
+    box-shadow: none;
+}
+
+.headroom--unpinned {
+    display: none;
+}
+
+.headroom--top {
+    box-shadow: none;
+    position: static;
+}
+
+@tailwind utilities;
+
