@@ -1,6 +1,6 @@
 
-# Marvel Portfolio Single Webpage
-**It Developed by using:**
+# Marvel Portfolio landing page
+**Developed by using:**
 - Html5
 - CSS3
 - JavaScript
